@@ -41,7 +41,7 @@ func (key KeyV2) ToEncryptedJSON(password string, scryptParams utils.ScryptParam
 	if err != nil {
 		return nil, errors.Wrapf(err, "could not encrypt P2P key")
 	}
-	rawPubKey, err := key.GetPublic().Bytes()
+	rawPubKey, err := key.GetPublic().Raw()
 	if err != nil {
 		return nil, errors.Wrapf(err, "could not get raw public key")
 	}

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"go.dedis.ch/kyber"
+	"go.dedis.ch/kyber/v3"
 	"vrf/common"
 	"vrf/common/signatures/secp256k1"
 	"vrf/utils"

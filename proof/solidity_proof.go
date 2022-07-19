@@ -5,6 +5,8 @@ package proof
 
 import (
 	"fmt"
+	"github.com/pkg/errors"
+	"go.dedis.ch/kyber/v3"
 	"math/big"
 	"vrf/vrfkey"
 

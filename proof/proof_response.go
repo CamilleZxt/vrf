@@ -4,6 +4,7 @@ package proof
 // block in which a VRF request appeared
 
 import (
+	"github.com/pkg/errors"
 	"vrf/common"
 	"vrf/keystore"
 	"vrf/utils"
@@ -103,15 +104,4 @@ func GenerateProofResponse(keystore keystore.VRF, id string, s PreSeedData) (
 		return MarshaledOnChainResponse{}, err
 	}
 	return GenerateProofResponseFromProof(proof, s)
-}
-
-func GenerateProofResponseV2(keystore keystore.VRF, id string, s PreSeedDataV2) (
-	vrf_coordinator_v2.VRFProof, vrf_coordinator_v2.VRFCoordinatorV2RequestCommitment, error) {
-	seedHashMsg := append(s.PreSeed[:], s.BlockHash.Bytes()...)
-	seed := utils.MustHash(string(seedHashMsg)).Big()
-	proof, err := keystore.GenerateProof(id, seed)
-	if err != nil {
-		return vrf_coordinator_v2.VRFProof{}, vrf_coordinator_v2.VRFCoordinatorV2RequestCommitment{}, err
-	}
-	return GenerateProofResponseFromProofV2(proof, s)
 }

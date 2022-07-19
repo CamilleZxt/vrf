@@ -10,7 +10,7 @@ import (
 
 	"vrf/common/signatures/secp256k1"
 
-	"vrf/keystore"
+	"github.com/ethereum/go-ethereum/accounts/keystore"
 	"vrf/utils"
 )
 
