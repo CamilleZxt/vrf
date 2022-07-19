@@ -3,6 +3,7 @@ package secp256k1
 import (
 	"bytes"
 	"encoding/hex"
+	"go.dedis.ch/kyber/v3"
 	"math/big"
 	"testing"
 

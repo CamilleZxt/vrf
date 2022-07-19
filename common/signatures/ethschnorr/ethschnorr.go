@@ -17,6 +17,7 @@ package ethschnorr
 import (
 	"bytes"
 	"fmt"
+	"go.dedis.ch/kyber/v3"
 	"math/big"
 
 	"vrf/common/signatures/secp256k1"

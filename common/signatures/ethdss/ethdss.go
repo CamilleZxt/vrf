@@ -21,6 +21,7 @@ package clientdss
 import (
 	"bytes"
 	"errors"
+	"go.dedis.ch/kyber/v3"
 	"math/big"
 
 	"vrf/common/signatures/ethschnorr"

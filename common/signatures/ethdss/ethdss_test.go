@@ -3,6 +3,7 @@ package clientdss
 import (
 	"crypto/rand"
 	"fmt"
+	"go.dedis.ch/kyber/v3"
 	"math/big"
 	"testing"
 

@@ -6,6 +6,7 @@ package ethschnorr
 import (
 	crand "crypto/rand"
 	"fmt"
+	"go.dedis.ch/kyber/v3"
 	"math/big"
 	mrand "math/rand"
 	"testing"
